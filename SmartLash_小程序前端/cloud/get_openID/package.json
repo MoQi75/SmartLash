@@ -1,0 +1,9 @@
+{
+  "name": "get_openid",
+  "version": "1.0.0",
+  "description": "Return current mini program user's openid",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "latest"
+  }
+}

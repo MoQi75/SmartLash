@@ -1,0 +1,39 @@
+<!--pages/my_content/user_login/user_login.wxml-->
+<page-meta>
+  <navigation-bar title="" front-color="black" background-color="#FFF"></navigation-bar>
+</page-meta>
+
+<text class="info_text" style="font-size: 24px; font-weight: 600;">
+您好，
+欢迎来到智能美睫
+</text>
+
+<image class="info_image" src="/images/my/user.png"></image>
+
+<view class="info">
+  <button class="info_login_create_button" disabled="{{!login_create_status}}" bindtap="vires_control">微信登录</button>
+  <view class="info_check">
+    <checkbox-group bindchange="checkboxChange">
+      <checkbox value="agree">您已阅读</checkbox>
+    </checkbox-group>
+    <text class="info_pact_text">《智能美睫隐私保护协议》</text>
+  </view>
+</view>
+
+<mp-half-screen-dialog
+  bindbuttontap="buttontap"
+  closabled="{{show_back}}"
+  show="{{show}}"
+  maskClosable="{{false}}"
+  buttons="{{buttons}}"
+>
+  <view class="vires_title" slot="title">
+    <image class="vires_title_icon" src="/images/my/user.png"></image>
+    <text style="margin-left: 5%; font-weight: bold;">智能美睫</text>
+    <text style="margin-left: 5%;">申请</text>
+  </view>
+  <view class="vires_content" style="text-align: left;" slot="desc">
+    <text style="font-size: larger; font-weight: bold;">使用你的微信账号信息</text>
+    <text style="font-size: medium; color: gray; margin-top: 15rpx;">进行用户登录</text>
+  </view>
+</mp-half-screen-dialog>

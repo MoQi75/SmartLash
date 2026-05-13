@@ -3,6 +3,7 @@ from __future__ import annotations
 import subprocess
 import sys
 import time
+import zipfile
 from pathlib import Path
 
 try:
@@ -12,6 +13,31 @@ except ImportError:  # pragma: no cover
 
 
 ROOT_DIR = Path(__file__).resolve().parent
+MODEL_WEIGHTS_ZIP = ROOT_DIR / "算法代码和模型" / "模型权重.zip"
+MODEL_WEIGHT_FILES = [
+    ROOT_DIR / "SmartLash_后端" / "Algorithm" / "common" / "best_model.joblib",
+    ROOT_DIR / "SmartLash_后端" / "Algorithm" / "common" / "shape_predictor_68_face_landmarks.dat",
+    ROOT_DIR / "算法代码和模型" / "checkpoints" / "EyelashNet" / "best_model.pth",
+    ROOT_DIR / "算法代码和模型" / "checkpoints" / "svm" / "best_model.joblib",
+]
+
+
+def ensure_model_weights() -> None:
+    missing_files = [path for path in MODEL_WEIGHT_FILES if not path.exists()]
+    if not missing_files:
+        return
+    if not MODEL_WEIGHTS_ZIP.exists():
+        missing = "\n".join(str(path) for path in missing_files)
+        raise FileNotFoundError(f"模型权重缺失，且未找到 {MODEL_WEIGHTS_ZIP}\n{missing}")
+
+    print(f"检测到模型权重缺失，正在从 {MODEL_WEIGHTS_ZIP.name} 解压...")
+    with zipfile.ZipFile(MODEL_WEIGHTS_ZIP, "r") as archive:
+        archive.extractall(ROOT_DIR)
+
+    still_missing = [path for path in MODEL_WEIGHT_FILES if not path.exists()]
+    if still_missing:
+        missing = "\n".join(str(path) for path in still_missing)
+        raise FileNotFoundError(f"模型权重解压后仍缺失：\n{missing}")
 
 CLI_CANDIDATES = [
     Path(r"D:\Program Files (x86)\Tencent\微信web开发者工具\cli.bat"),
@@ -155,6 +181,7 @@ def open_project_with_cli(cli_path: Path) -> tuple[bool, str]:
 
 def main() -> int:
     try:
+        ensure_model_weights()
         cli_path = find_cli()
         gui_path = find_gui(cli_path)
 

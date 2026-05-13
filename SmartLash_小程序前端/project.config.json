@@ -1,0 +1,45 @@
+{
+  "compileType": "miniprogram",
+  "cloudfunctionRoot": "cloud/",
+  "setting": {
+    "ignoreDevUnusedFiles": false,
+    "ignoreUploadUnusedFiles": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "es6": false,
+    "minified": true,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "condition": false,
+    "enhance": false,
+    "coverView": false,
+    "postcss": false,
+    "showShadowRootInWxmlPanel": false,
+    "compileWorklet": false,
+    "uglifyFileName": false,
+    "uploadWithSourceMap": true,
+    "minifyWXSS": true,
+    "minifyWXML": true,
+    "localPlugins": false,
+    "disableUseStrict": false,
+    "useCompilerPlugins": false,
+    "swc": false,
+    "disableSWC": true
+  },
+  "condition": {},
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  },
+  "simulatorPluginLibVersion": {},
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "appid": "wxfb375dcbde77560f",
+  "projectname": "%E6%99%BA%E7%9D%AB",
+  "libVersion": "3.7.12"
+}

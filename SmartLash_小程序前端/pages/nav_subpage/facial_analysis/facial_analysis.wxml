@@ -1,0 +1,52 @@
+<page-meta>
+  <navigation-bar title="智能美睫" front-color="black" background-color="#FFF"></navigation-bar>
+</page-meta>
+
+<view class="window_view">
+  <swiper class="analysis_swiper" vertical="true" circular="true">
+    <swiper-item class="analysis_swiper_item">
+      <view class="analysis_back">
+        <view class="analysis_item">
+          <view class="analysis_item_header">
+            <image class="analysis_item_icon" src="{{images.icon}}" mode="aspectFill"></image>
+            <text class="analysis_item_title">智能美睫</text>
+          </view>
+          <text class="analysis_item_describe">专业的睫毛夹检测功能</text>
+          <button class="analysis_item_button" bindtap="analysis_begin">开始检测</button>
+        </view>
+        <view class="analysis_show" bindtap="last_analysis">
+          <image class="analysis_show_back" src="{{images.showBack}}"></image>
+          <text class="analysis_show_text">{{last_analysis}}</text>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+
+  <view class="container">
+    <view class="header">
+      <text class="title">检测步骤</text>
+    </view>
+    <view class="steps">
+      <view class="step">
+        <image class="icon" src="{{images.camera}}"></image>
+        <text>拍照</text>
+      </view>
+      <view class="step">
+        <image class="icon" src="{{images.ai}}"></image>
+        <text>AI检测</text>
+      </view>
+      <view class="step">
+        <image class="icon" src="{{images.reported}}"></image>
+        <text>生成报告</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="ad-wrapper">
+    <image class="advertisement" src="{{images.advertisement}}" hover-class="image-hover"></image>
+    <view class="ad-corner-tl"></view>
+    <view class="ad-corner-tr"></view>
+    <view class="ad-corner-bl"></view>
+    <view class="ad-corner-br"></view>
+  </view>
+</view>

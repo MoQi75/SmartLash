@@ -1,0 +1,475 @@
+<!--package_my_content/pages/app_use/app_use.wxml-->
+<page-meta>
+  <navigation-bar title="使用教程" front-color="black" background-color="#F0F0F0"></navigation-bar>
+</page-meta>  
+
+<view class="container">
+  <!-- 精美标题 -->
+  <view class="modern-header">
+    <view class="header-container">
+      <view class="title-box">
+        <view class="main-title">智能美睫小程序</view>
+        <view class="sub-title">使用教程指南</view>
+      </view>
+      <view class="badge">您的专属睫毛护理专家</view>
+    </view>
+  </view>
+
+  <!-- 一、下载与注册 -->
+  <view class="section card">
+    <view class="section-title">
+      <view class="section-number">01</view>
+      <text>下载与注册</text>
+    </view>
+    <view class="section-content">
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">1</view>
+          <view class="step-content">
+            <view class="step-title">下载</view>
+            <view class="step-desc">打开微信，点击右下角的"发现"，选择"小程序"，在搜索框中输入"智能美睫"，点击搜索结果中的小程序图标即可进入。</view>
+          </view>
+        </view>
+      </view>
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">2</view>
+          <view class="step-content">
+            <view class="step-title">注册</view>
+            <view class="step-desc">
+              <view>• 点击小程序首页右下角的"我的"或"个人中心"按钮</view>
+              <view>• 点击"登录"或"注册"按钮，按照提示输入手机号码，获取验证码并填写</view>
+              <view>• 也可以选择使用微信授权登录，授权小程序获取微信信息</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 二、睫毛检测 -->
+  <view class="section card">
+    <view class="section-title">
+      <view class="section-number">02</view>
+      <text>睫毛检测</text>
+    </view>
+    <view class="section-content">
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">1</view>
+          <view class="step-content">
+            <view class="step-title">进入检测页面</view>
+            <view class="step-desc">在小程序首页，点击"睫毛检测"按钮，进入检测界面</view>
+          </view>
+        </view>
+      </view>
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">2</view>
+          <view class="step-content">
+            <view class="step-title">准备检测</view>
+            <view class="step-desc">
+              <view>• 确保周围光线充足，避免强光直射或光线过暗</view>
+              <view>• 将手机摄像头对准眼睛，保持20-30厘米距离</view>
+              <view>• 按照界面提示调整角度和距离</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">3</view>
+          <view class="step-content">
+            <view class="step-title">开始检测</view>
+            <view class="step-desc">点击"开始检测"按钮，小程序会自动分析您的睫毛长度、浓密度、卷翘度等指标</view>
+          </view>
+        </view>
+      </view>
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">4</view>
+          <view class="step-content">
+            <view class="step-title">查看结果</view>
+            <view class="step-desc">页面会显示您的睫毛各项指标的具体数值和对应的等级，并给出专业护理建议</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 三、睫毛报告 -->
+  <view class="section card">
+    <view class="section-title">
+      <view class="section-number">03</view>
+      <text>睫毛报告</text>
+    </view>
+    <view class="section-content">
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">1</view>
+          <view class="step-content">
+            <view class="step-title">生成报告</view>
+            <view class="step-desc">在完成睫毛检测后，点击检测结果页面中的"生成报告"按钮</view>
+          </view>
+        </view>
+      </view>
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">2</view>
+          <view class="step-content">
+            <view class="step-title">查看报告内容</view>
+            <view class="step-desc">
+              <view>• 包含基本信息及睫毛指标数据</view>
+              <view>• 对比上次检测数据（如果有）</view>
+              <view>• 提供个性化护理方案</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">3</view>
+          <view class="step-content">
+            <view class="step-title">保存与分享</view>
+            <view class="step-desc">可将报告保存到本地相册或分享到微信好友、朋友圈等社交平台</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 四、测试记录 -->
+  <view class="section card">
+    <view class="section-title">
+      <view class="section-number">04</view>
+      <text>测试记录</text>
+    </view>
+    <view class="section-content">
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">1</view>
+          <view class="step-content">
+            <view class="step-title">查看记录</view>
+            <view class="step-desc">进入个人页面后，找到"测试记录"选项并点击进入</view>
+          </view>
+        </view>
+      </view>
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">2</view>
+          <view class="step-content">
+            <view class="step-title">记录内容</view>
+            <view class="step-desc">查看历次睫毛检测记录，包括检测时间、各项睫毛指标数据等</view>
+          </view>
+        </view>
+      </view>
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">3</view>
+          <view class="step-content">
+            <view class="step-title">对比分析</view>
+            <view class="step-desc">选择多条检测记录进行对比，直观了解睫毛变化情况</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 五、浏览历史 -->
+  <view class="section card">
+    <view class="section-title">
+      <view class="section-number">05</view>
+      <text>浏览历史</text>
+    </view>
+    <view class="section-content">
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">1</view>
+          <view class="step-content">
+            <view class="step-title">进入浏览历史</view>
+            <view class="step-desc">在"我的"页面，点击"浏览历史"按钮</view>
+          </view>
+        </view>
+      </view>
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">2</view>
+          <view class="step-content">
+            <view class="step-title">查看历史记录</view>
+            <view class="step-desc">记录您浏览过的所有页面、文章、产品等信息</view>
+          </view>
+        </view>
+      </view>
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">3</view>
+          <view class="step-content">
+            <view class="step-title">清理历史</view>
+            <view class="step-desc">可删除不需要的浏览记录</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 六、好物推荐 -->
+  <view class="section card">
+    <view class="section-title">
+      <view class="section-number">06</view>
+      <text>好物推荐</text>
+    </view>
+    <view class="section-content">
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">1</view>
+          <view class="step-content">
+            <view class="step-title">浏览推荐内容</view>
+            <view class="step-desc">根据您的睫毛状况个性化推荐适合的睫毛护理产品</view>
+          </view>
+        </view>
+      </view>
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">2</view>
+          <view class="step-content">
+            <view class="step-title">查看详情</view>
+            <view class="step-desc">查看商品详细介绍，包括产品功效、成分、用户评价等</view>
+          </view>
+        </view>
+      </view>
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">3</view>
+          <view class="step-content">
+            <view class="step-title">购买商品</view>
+            <view class="step-desc">点击"立即购买"按钮，按照提示完成支付流程</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 七、购物记录 -->
+  <view class="section card">
+    <view class="section-title">
+      <view class="section-number">07</view>
+      <text>购物记录</text>
+    </view>
+    <view class="section-content">
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">1</view>
+          <view class="step-content">
+            <view class="step-title">查看购物记录</view>
+            <view class="step-desc">在"我的"页面中的"购物记录"按钮</view>
+          </view>
+        </view>
+      </view>
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">2</view>
+          <view class="step-content">
+            <view class="step-title">记录内容</view>
+            <view class="step-desc">显示所有购买商品的记录，包括商品名称、购买时间、订单状态等</view>
+          </view>
+        </view>
+      </view>
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">3</view>
+          <view class="step-content">
+            <view class="step-title">订单详情</view>
+            <view class="step-desc">查看订单详细信息，如商品图片、规格、物流信息等</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 八、愿望清单 -->
+  <view class="section card">
+    <view class="section-title">
+      <view class="section-number">08</view>
+      <text>愿望清单</text>
+    </view>
+    <view class="section-content">
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">1</view>
+          <view class="step-content">
+            <view class="step-title">添加商品</view>
+            <view class="step-desc">在商品详情页面点击"加入愿望清单"按钮</view>
+          </view>
+        </view>
+      </view>
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">2</view>
+          <view class="step-content">
+            <view class="step-title">查看愿望清单</view>
+            <view class="step-desc">进入愿望清单页面，查看所有已添加的商品。点击商品图片或名称可进入详情页，了解更多信息。</view>
+          </view>
+        </view>
+      </view>
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">3</view>
+          <view class="step-content">
+            <view class="step-title">管理愿望清单</view>
+            <view class="step-desc">可删除不再感兴趣的商品</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 九、AI大模型对话功能 -->
+  <view class="section card">
+    <view class="section-title">
+      <view class="section-number">09</view>
+      <text>AI大模型对话功能</text>
+    </view>
+    <view class="section-content">
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">1</view>
+          <view class="step-content">
+            <view class="step-title">进入对话页面</view>
+            <view class="step-desc">点击"AI助手"或"睫毛知识问答"按钮</view>
+          </view>
+        </view>
+      </view>
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">2</view>
+          <view class="step-content">
+            <view class="step-title">提问与互动</view>
+            <view class="step-desc">
+              <view>• 通过语音或文字输入关于睫毛的各种问题</view>
+              <view>• AI会提供详细、准确的回答，包括文字说明、图片示例等</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">3</view>
+          <view class="step-content">
+            <view class="step-title">知识拓展</view>
+            <view class="step-desc">AI会为您推荐相关的睫毛护理小贴士、产品推荐等内容</view>
+          </view>
+        </view>
+      </view>
+      <view class="subsection">
+        <view class="step">
+          <view class="step-icon">4</view>
+          <view class="step-content">
+            <view class="step-title">保存与分享</view>
+            <view class="step-desc">可将回答内容保存或分享到社交平台</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 十、常见问题解答 -->
+  <view class="section card">
+    <view class="section-title">
+      <view class="section-number">10</view>
+      <text>常见问题解答</text>
+    </view>
+    <view class="section-content">
+      <view class="faq-item">
+        <view class="faq-question">Q: 睫毛检测不准确怎么办？</view>
+        <view class="faq-answer">
+          <view>• 检查周围光线是否合适，重新调整光线和摄像头角度</view>
+          <view>• 更新小程序到最新版本，或联系客服反馈问题</view>
+        </view>
+      </view>
+      <view class="faq-item">
+        <view class="faq-question">Q: 如何修改个人信息？</view>
+        <view class="faq-answer">在"我的"页面，点击头像或昵称进入个人信息编辑页面</view>
+      </view>
+      <view class="faq-item">
+        <view class="faq-question">Q: 如何删除购物记录？</view>
+        <view class="faq-answer">在购物记录页面，点击记录右侧的"删除"按钮</view>
+      </view>
+      <view class="faq-item">
+        <view class="faq-question">Q: AI助手回答问题有延迟怎么办？</view>
+        <view class="faq-answer">
+          <view>• 检查网络连接</view>
+          <view>• 稍后再尝试提问</view>
+          <view>• 联系客服反馈情况</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 结尾部分 -->
+  <!-- 精美结尾 -->
+  <view class="footer">
+    <view class="footer-wave">
+      <view class="wave wave1"></view>
+      <view class="wave wave2"></view>
+    </view>
+    <view class="footer-content">
+      <view class="footer-logo">
+        <view class="logo-icon">✨</view>
+        <view class="logo-text">智能美睫</view>
+      </view>
+      <view class="footer-message">
+        <view class="message-text">感谢您选择智能美睫小程序</view>
+        <view class="message-desc">让我们一起打造迷人电眼</view>
+      </view>
+      <view class="contact-info">
+        <view class="contact-item">
+          <view class="contact-icon">📱</view>
+          <view class="contact-text">客服热线: 182-9152-7995</view>
+        </view>
+        <view class="contact-item">
+          <view class="contact-icon">🕒</view>
+          <view class="contact-text">服务时间: 9:00-21:00</view>
+        </view>
+      </view>
+      <view class="copyright">©2025 智能美睫 版权所有</view>
+    </view>
+  </view>
+</view>
+
+
+
+
+<!-- <scroll-view scroll-y="true" show-scrollbar="false" style="height: {{layout_height}}px;">
+  <view class="use-view" style="height: {{layout_height}}px;">
+    <block wx:for="{{use_item }}" wx:key="this" wx:for-index="idx_use" wx:for-item="item_use">
+      <text class="analysis-use-title">{{item_use.title}}</text>
+      <block wx:for="{{item_use.step_item}}" wx:key="this" wx:for-index="idx_step" wx:for-item="item_step">
+        <view class="analysis-use-step" bindtap = "image_show" data-use="{{item_use.id}}" data-step="{{item_step.number}}"> 
+          <view style="width: 80%; height: 100%; display: flex; flex-direction: row; align-items: center;"> 
+            <text class="analysis-use-step-number">{{item_step.number}}</text>
+            <view style="height: 40%; border-style: solid; border-color: black; border-width: 0.5px;"></view>
+            <text class="analysis-use-step-content">{{item_step.content}}</text>
+          </view>
+          <image class="analysis-use-step-image" src="{{item_step.image}}"></image>
+        </view>
+      </block>
+      <text class="analysis-use-step-end">{{item_use.end}}</text>
+    </block>
+  </view>
+  <view style="width: 100%; height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 60px;">更多使用教程，敬请等待！</view>
+</scroll-view>
+
+
+<view class="dialog-container" wx:if="{{isDialogVisible}}">  
+  <view class="dialog">  
+    <view class="dialog-button" bindtap= "dialog_control" >
+      <image style="width: 100%; height: 100%;" src="cloud://intelligence-eyelas-5cp2d403d836.696e-intelligence-eyelas-5cp2d403d836-1323971123/images/analysis_swiper/one_item/camera_face/dialog_close.png" mode="scaleToFill"></image>
+    </view>
+    <view class="dialog-title">  
+      <text style="font-size: 18px; font-weight: 700; margin-top: 5px;">{{dialog_title}}</text>  
+    </view>  
+    <view class="dialog-image">
+      <image style="width: 100%; height: 100%; " src="{{dialog_image}}" mode="scaleToFill"></image>
+    </view>
+  </view>  
+</view>   -->

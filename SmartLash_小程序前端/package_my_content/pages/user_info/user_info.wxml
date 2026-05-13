@@ -1,0 +1,75 @@
+<!--pages/my_content/user_info/user_info.wxml-->
+<page-meta>
+  <navigation-bar title="我的信息" front-color="black" background-color="#F0F0F0"></navigation-bar>
+</page-meta>   
+
+<view class="window_view_info">
+  <!-- 往下开发我的功能组件-->
+  <view class="info" bindtap = "chooseAvatar">
+    <text class="info_item_title" style=" font-size: 17px;">头像</text>
+    <view class="info_item_content" >
+      <image src="{{userInfo.avatar}}" style="width: 40px; height: 40px;" mode="aspectFill"></image>
+    </view>
+    <image class="info_item_end" src="cloud://intelligence-eyelas-5cp2d403d836.696e-intelligence-eyelas-5cp2d403d836-1323971123/images/my_swiper/enter_icon.png" mode="aspectFill"></image>
+  </view>
+  <view class="info_item_interval"></view>
+
+  <view class="info" bindtap="showDialog">
+    <text class="info_item_title" style=" font-size: 17px;">账号</text>
+    <view class="info_item_content" >
+      <text>{{user_account}}</text>
+    </view>
+    <image class="info_item_end" src="cloud://intelligence-eyelas-5cp2d403d836.696e-intelligence-eyelas-5cp2d403d836-1323971123/images/my_swiper/enter_icon.png" mode="aspectFill"></image>
+  </view>
+  <view class="info_item_interval"></view>
+
+  <picker value="{{index}}" range="{{array}}" bindchange="bindPickerChange">
+    <view class="info">
+      <text class="info_item_title" style=" font-size: 17px;">性别</text>
+      <view class="info_item_content" >
+        <text>{{userInfo.gender}}</text>
+      </view>
+      <image class="info_item_end" src="cloud://intelligence-eyelas-5cp2d403d836.696e-intelligence-eyelas-5cp2d403d836-1323971123/images/my_swiper/enter_icon.png" mode="aspectFill"></image>
+    </view>
+  </picker>
+  <view class="info_item_interval"></view>
+
+  <picker mode="date" value="{{birth_date}}" start="1940-09-01" end="2024-03-24" bindchange="bindDateChange">
+    <view class="info">
+      <text class="info_item_title" style=" font-size: 17px;">年龄</text>
+      <view class="info_item_content" >
+        <text>{{userInfo.age}}</text>
+      </view>
+      <image class="info_item_end" src="cloud://intelligence-eyelas-5cp2d403d836.696e-intelligence-eyelas-5cp2d403d836-1323971123/images/my_swiper/enter_icon.png" mode="aspectFill"></image>
+    </view>
+  </picker>
+  <view class="info_item_interval"></view>
+
+  <picker mode="region" value="{{region}}" level="city" bindchange="bindRegionChange">
+    <view class="info" >
+      <text class="info_item_title" style=" font-size: 17px;">城市</text>
+      <view class="info_item_content" >
+        <text>{{userInfo.district.province}} {{userInfo.district.city}}</text>
+      </view>
+      <image class="info_item_end" src="cloud://intelligence-eyelas-5cp2d403d836.696e-intelligence-eyelas-5cp2d403d836-1323971123/images/my_swiper/enter_icon.png" mode="aspectFill"></image>
+    </view>
+  </picker>
+  <view class="info_item_interval"></view>
+
+</view>
+
+<view class="dialog-container" wx:if="{{isDialogVisible}}">  
+  <view class="dialog">  
+    <view class="dialog-title">  
+      <text style="size: 18px; font-weight: 600;">请输入新账号</text>  
+    </view>  
+    <view class="dialog-input">
+      <input maxlength="10" type="number" style="text-align: center;" bindinput="get_new_account"></input>
+    </view>
+    <view class="dialog-footer">  
+      <button bindtap="cancel_hideDialog" style="background-color: #007aff; ">取消</button> 
+      <button bindtap="ok_hideDialog" style="background-color: gray;">确定</button>  
+    </view>  
+  </view>  
+</view>  
+

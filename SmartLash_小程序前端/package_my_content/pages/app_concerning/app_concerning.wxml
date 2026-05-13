@@ -1,0 +1,22 @@
+<!--package_my_content/pages/app_concerning/app_concerning.wxml-->
+<page-meta>
+  <navigation-bar title="关于" front-color="black" background-color="#F0F0F0"></navigation-bar>
+</page-meta> 
+<view class="concerning_top">
+  <image class="concerning_top_image" src="cloud://cloud1-9geq9yr408a211a1.636c-cloud1-9geq9yr408a211a1-1349710534/images/my_swiper/logo.jpg"></image>
+  <text class="concerning_top_title">美在眉睫团队</text>
+</view>
+<scroll-view scroll-y="true" style="width: 100%; height: 1200rpx; display: flex; flex-direction: column; align-items: center; margin-top: 10rpx;">
+  <block wx:for="{{firm_content}}" wx:key="this" wx:for-index="idx" wx:for-item="item">
+    <view class="firm_out">
+      <view class="firm_in" bindtap = "firm_control" data-index="{{idx}}">
+        <image class="firm_image" src="{{item.image}}" mode="aspectFill"></image>
+        <text>{{item.title}}</text>
+      </view>
+      <view class="firm_out" wx:if="{{item.flag}}">
+        <view style="width: 95%; height: 1rpx; background-color: gray;"></view>
+        <text style="margin-top: 20rpx; padding: 10rpx; text-indent: 2em;">{{item.content}}</text>
+      </view>
+    </view>
+  </block>
+</scroll-view>

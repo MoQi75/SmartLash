@@ -7,6 +7,7 @@ import sys
 import time
 import urllib.request
 import webbrowser
+import zipfile
 from pathlib import Path
 
 
@@ -15,6 +16,31 @@ OPEN_URL = "http://127.0.0.1:8002/login?fresh=1"
 HEALTH_URL = "http://127.0.0.1:8002/img/hello/"
 LOCAL_CONFIG_DIR = ROOT_DIR / ".smartlash"
 LOCAL_ENV_FILE = LOCAL_CONFIG_DIR / "local.env"
+MODEL_WEIGHTS_ZIP = ROOT_DIR / "算法代码和模型" / "模型权重.zip"
+MODEL_WEIGHT_FILES = [
+    ROOT_DIR / "SmartLash_后端" / "Algorithm" / "common" / "best_model.joblib",
+    ROOT_DIR / "SmartLash_后端" / "Algorithm" / "common" / "shape_predictor_68_face_landmarks.dat",
+    ROOT_DIR / "算法代码和模型" / "checkpoints" / "EyelashNet" / "best_model.pth",
+    ROOT_DIR / "算法代码和模型" / "checkpoints" / "svm" / "best_model.joblib",
+]
+
+
+def ensure_model_weights() -> None:
+    missing_files = [path for path in MODEL_WEIGHT_FILES if not path.exists()]
+    if not missing_files:
+        return
+    if not MODEL_WEIGHTS_ZIP.exists():
+        missing = "\n".join(str(path) for path in missing_files)
+        raise FileNotFoundError(f"模型权重缺失，且未找到 {MODEL_WEIGHTS_ZIP}\n{missing}")
+
+    print(f"检测到模型权重缺失，正在从 {MODEL_WEIGHTS_ZIP.name} 解压...")
+    with zipfile.ZipFile(MODEL_WEIGHTS_ZIP, "r") as archive:
+        archive.extractall(ROOT_DIR)
+
+    still_missing = [path for path in MODEL_WEIGHT_FILES if not path.exists()]
+    if still_missing:
+        missing = "\n".join(str(path) for path in still_missing)
+        raise FileNotFoundError(f"模型权重解压后仍缺失：\n{missing}")
 
 
 def find_backend_dir() -> Path:
@@ -203,6 +229,7 @@ def wait_for_server(url: str, timeout: float = 30.0) -> bool:
 def main() -> int:
     try:
         runtime_env = load_local_env()
+        ensure_model_weights()
         ensure_backend_requirements()
         ensure_frontend_dependencies(runtime_env)
         build_frontend(runtime_env)

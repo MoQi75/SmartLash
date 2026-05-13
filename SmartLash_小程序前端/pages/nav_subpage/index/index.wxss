@@ -1,0 +1,139 @@
+/* pages/nav_subpage/index/index.wxss */
+.container {
+  padding: 10px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+/* pages/index/index.wxss */
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90rpx;
+  /* background-color: #16a0f8; */
+}
+.search .search_in {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  padding:0 20rpx ;
+  box-sizing: border-box;
+  height: 70rpx;
+  width: 710rpx;
+  background-color: #ffffff;
+  border: 2px solid #0761c2;
+  border-radius: 35rpx;
+}
+.search_in image {
+  height: 45rpx;
+  width: 45rpx;
+}
+.search input {
+  width: 480rpx;
+}
+.search_in .search_btn {
+  height: 55rpx;
+  width: 110rpx;
+  border-radius: 55rpx;
+  background-color: #7b79e7;
+  color: #ffffff;
+  text-align: center;
+  line-height: 55rpx;
+  cursor: pointer;
+}
+
+
+.container-2 {
+  padding: 20rpx;
+  /* background-color: #a1fafd;  */
+  background-color: rgb(239, 247, 246);
+  border-radius: 15rpx; 
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1); 
+  margin: 20rpx; 
+}
+
+.black-font {
+  color: #000; 
+  font-weight: bold; 
+  line-height: 1.5;
+  padding: 10rpx; 
+  border-radius: 8rpx; 
+  text-align: center; 
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30rpx;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rpx;
+  /* background-color: #f8f8f8; */
+  border-radius: 16rpx;
+}
+
+.grid-item image {
+  width: 70rpx;
+  height: 70rpx;
+  margin-bottom: 10rpx;
+}
+
+.grid-item text {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.container-3 {
+  padding: 10px;
+}
+
+.header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background-color: #d3b3ff;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+}
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  height: 140px;
+  width: 43%;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  width: 100%;
+  height: 65%;
+  margin-bottom: 5px;
+}
+
+.card-text {
+  font-size: 12px; 
+  color: #333; 
+  text-align: left; 
+  background-color: #f9f9f9; 
+}

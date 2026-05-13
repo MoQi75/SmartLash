@@ -1,0 +1,173 @@
+/* pages/my_content/test_record/test_record.wxss */
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(240, 240, 240);
+}
+
+.records-container {
+  padding: 15px;
+  height: 100vh;
+  background: #f8f8f8;
+}
+
+.records-header {
+  margin-bottom: 20px;
+}
+
+.header-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.filter-item {
+  padding: 6px 12px;
+  border-radius: 15px;
+  background: #eee;
+  font-size: 14px;
+  color: #666;
+}
+
+.filter-item.active {
+  background: #FF6B81;
+  color: white;
+}
+
+.filter-icon {
+  margin-left: auto;
+  font-size: 18px;
+}
+
+/* 统计卡片 */
+.stats-card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.stat-item {
+  text-align: center;
+  flex: 1;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FF6B81;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #999;
+}
+
+/* 记录列表 */
+.records-list {
+  height: calc(100vh - 260px);
+}
+
+.record-card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.card-left {
+  width: 80px;
+}
+
+.record-date {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.record-time {
+  font-size: 12px;
+  color: #999;
+}
+
+.card-middle {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.progress-bar {
+  height: 6px;
+  background: #f0f0f0;
+  border-radius: 3px;
+  margin-bottom: 12px;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(to right, #FF9A9E, #FF6B81);
+}
+
+.indicators {
+  display: flex;
+  gap: 10px;
+}
+
+.indicator {
+  flex: 1;
+}
+
+.label {
+  display: block;
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 3px;
+}
+
+.value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.card-right {
+  width: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.compare-up {
+  color: #4CAF50;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.compare-down {
+  color: #F44336;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.action-btn {
+  background: #FF6B81;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+}

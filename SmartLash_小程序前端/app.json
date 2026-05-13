@@ -1,0 +1,85 @@
+{
+  "pages": [
+    "pages/nav_subpage/facial_analysis/facial_analysis",
+    "pages/nav_subpage/my_content/my_content",
+    "pages/nav_subpage/index/index",
+    "pages/nav_subpage/goods/goods",
+    "pages/nav_subpage/statement/statement",
+    "pages/nav_subpage/large_model/large_model"
+  ],
+  "subpackages": [
+    {
+      "root": "package_facial_analysis",
+      "name": "小程序检测页面",
+      "pages": [
+        "pages/camera_face/camera_face",
+        "pages/statement/statement"
+      ]
+    },
+    {
+      "root": "package_my_content",
+      "name": "小程序我的页面",
+      "pages": [
+        "pages/test_record/test_record",
+        "pages/user_login/user_login",
+        "pages/user_info/user_info",
+        "pages/app_settings/app_settings",
+        "pages/app_concerning/app_concerning",
+        "pages/app_use/app_use"
+      ]
+    }
+  ],
+  "window": {},
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#9501e5",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/tabBar/index_select.png",
+        "iconPath": "images/tabBar/index.png",
+        "pagePath": "pages/nav_subpage/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/tabBar/facial_select.png",
+        "iconPath": "images/tabBar/facial.png",
+        "pagePath": "pages/nav_subpage/facial_analysis/facial_analysis",
+        "text": "检测"
+      },
+      {
+        "selectedIconPath": "images/tabBar/ai_select.png",
+        "iconPath": "images/tabBar/ai.png",
+        "pagePath": "pages/nav_subpage/large_model/large_model",
+        "text": "大模型"
+      },
+      {
+        "selectedIconPath": "images/tabBar/good_select.png",
+        "iconPath": "images/tabBar/good.png",
+        "pagePath": "pages/nav_subpage/goods/goods",
+        "text": "商品"
+      },
+      {
+        "selectedIconPath": "images/tabBar/my_select.png",
+        "iconPath": "images/tabBar/my.png",
+        "pagePath": "pages/nav_subpage/my_content/my_content",
+        "text": "我的"
+      }
+    ]
+  },
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "__usePrivacyCheck__": true,
+  "useExtendedLib": {
+    "weui": true
+  }
+}

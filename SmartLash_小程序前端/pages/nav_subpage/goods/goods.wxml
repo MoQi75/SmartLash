@@ -1,0 +1,39 @@
+<!--pages/nav_subpage/goods/goods.wxml-->
+<page-meta>
+  <navigation-bar title="商品" front-color="black" background-color="#F0F0F0"></navigation-bar>
+</page-meta>
+
+<view class="container">
+  <view class="banner-container">
+    <view class="banner">
+      <image class="banner-image" src="{{bannerImage}}" mode="widthFix"></image>
+    </view>
+  </view>
+
+  <view class="nav-container">
+    <scroll-view class="product-categories" scroll-x="true" scroll-y="false" scroll-left="{{scrollLeft}}">
+      <block wx:for="{{categories}}" wx:key="index">
+        <view class="category {{currentCategory === index ? 'active' : ''}}" data-index="{{index}}" bindtap="onCategoryTap">
+          {{item}}
+          <view class="underline"></view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <view class="product-grid">
+    <block wx:for="{{products[currentCategory]}}" wx:key="id">
+      <view class="product" bindtap="onProductTap" data-id="{{item.id}}">
+        <image class="product-image" src="{{item.image}}" mode="aspectFill"></image>
+        <view class="product-info">
+          <text class="product-name">{{item.name}}</text>
+          <view class="price-container">
+            <text class="product-price">¥{{item.price}}</text>
+            <text class="product-original-price" wx:if="{{item.originalPrice}}">¥{{item.originalPrice}}</text>
+          </view>
+          <view class="tag" wx:if="{{item.tag}}">{{item.tag}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

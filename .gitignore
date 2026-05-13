@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+ENV/
+.env
+.env.*
+.smartlash/local.env
+
+# Django/runtime
+db.sqlite3
+*.log
+runserver.out.log
+runserver.err.log
+media/
+test/
+test1/
+frontend_dist/
+
+# Node/Vite
+node_modules/
+dist/
+build/
+.vite/
+.npm-cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE/system
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Extracted model weights. Keep only the compressed LFS archive.
+*.pth
+*.pt
+*.joblib
+*.dat
+!算法代码和模型/模型权重.zip

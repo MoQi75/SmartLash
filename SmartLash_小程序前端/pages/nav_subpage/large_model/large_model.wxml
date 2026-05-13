@@ -1,0 +1,76 @@
+<page-meta>
+  <navigation-bar title="AI智能助手" front-color="black" background-color="#FFFFFF" loading="{{isLoading}}"></navigation-bar>
+</page-meta>
+
+<view class="header-block">
+  <image class="header-bg" src="{{images.headerBg}}" mode="aspectFill"></image>
+  <view class="header-actions">
+    <button class="clear-btn" bindtap="clearChat">清空对话</button>
+  </view>
+  <view class="header-content">
+    <image class="header-image" src="{{images.aiIcon}}" mode="aspectFill"></image>
+    <text class="header-title">AI 检测</text>
+    <text class="header-subtitle">为睫毛检测提供智能问答支持</text>
+  </view>
+  <view class="header-wave"></view>
+</view>
+
+<view class="container">
+  <scroll-view class="chat-area" scroll-y scroll-with-animation scroll-top="{{scrollTop}}" enhanced>
+    <view class="chat-bg"></view>
+    <block wx:for="{{messages}}" wx:key="id">
+      <view class="message {{item.role}} {{item.isTyping ? 'typing' : ''}}">
+        <view class="avatar">
+          <image wx:if="{{item.role === 'user'}}" src="{{images.user}}"></image>
+          <image wx:if="{{item.role === 'assistant'}}" src="{{images.assistant}}"></image>
+        </view>
+        <view class="content-box">
+          <view class="content">
+            {{item.content}}
+            <text class="cursor" wx:if="{{item.isTyping}}">|</text>
+          </view>
+          <view class="time">{{item.time}}</view>
+        </view>
+      </view>
+    </block>
+
+    <view wx:if="{{isLoading}}" class="message assistant">
+      <view class="avatar">
+        <image src="{{images.avatar}}"></image>
+      </view>
+      <view class="content-box">
+        <view class="content">
+          <text>思考中</text>
+          <text class="dot-animation">...</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="prompt-container" wx:if="{{showPrompts && messages.length <= 1 && messages[0] && messages[0].role === 'assistant'}}">
+      <text class="prompt-title">试试问我</text>
+      <view class="prompt-list">
+        <view class="prompt-item" wx:for="{{prompts}}" wx:key="index" bindtap="usePrompt" data-prompt="{{item.text}}">
+          {{item.text}}
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="input-area">
+    <view class="input-container">
+      <input
+        class="input"
+        placeholder="和 AI 聊点什么..."
+        placeholder-class="placeholder"
+        value="{{inputValue}}"
+        bindinput="onInput"
+        bindconfirm="sendMessage"
+        confirm-type="send"
+      />
+      <view class="input-decoration"></view>
+    </view>
+    <button class="send-btn" bindtap="sendMessage" hover-class="btn-hover">
+      <image src="{{images.send}}" mode="aspectFit"></image>
+    </button>
+  </view>
+</view>

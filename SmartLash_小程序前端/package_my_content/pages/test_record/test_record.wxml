@@ -1,0 +1,129 @@
+<!--pages/my_content/test_record/test_record.wxml-->
+<page-meta>
+  <navigation-bar title="测试记录" front-color="black" background-color="#F0F0F0"></navigation-bar>
+</page-meta>  
+
+<view class="records-container">
+  <!-- 标题和筛选栏 -->
+  <view class="records-header">
+    <view class="header-title">睫毛测试记录</view>
+    <view class="filter-bar">
+      <view class="filter-item active">全部</view>
+      <view class="filter-item">最近7天</view>
+      <view class="filter-item">最近30天</view>
+      <view class="filter-icon">🔍</view>
+    </view>
+  </view>
+
+  <!-- 数据统计卡片 -->
+  <view class="stats-card">
+    <view class="stat-item">
+      <view class="stat-value">3</view>
+      <view class="stat-label">总测试次数</view>
+    </view>
+    <view class="stat-item">
+      <view class="stat-value">圆眼长睫</view>
+      <view class="stat-label">测试眼型</view>
+    </view>
+    <view class="stat-item">
+      <view class="stat-value">66.67%</view>
+      <view class="stat-label">当前比例</view>
+    </view>
+  </view>
+
+  <!-- 测试记录列表 -->
+  <scroll-view class="records-list" scroll-y>
+    <view class="record-card">
+      <view class="card-left">
+        <view class="record-date">2025-4-26</view>
+        <view class="record-time">14:36</view>
+      </view>
+      <view class="card-middle">
+        <view class="progress-bar">
+          <view class="progress-fill" style="width: 78%"></view>
+        </view>
+        <view class="indicators">
+          <view class="indicator">
+            <text class="label">长度</text>
+            <text class="value">8.2mm</text>
+          </view>
+          <view class="indicator">
+            <text class="label">密度</text>
+            <text class="value">85%</text>
+          </view>
+          <view class="indicator">
+            <text class="label">眼型</text>
+            <text class="value">圆眼</text>
+          </view>
+        </view>
+      </view>
+      <view class="card-right">
+        <view class="compare-up">↑12%</view>
+        <view class="action-btn" bindtap="navigateToDetail" >查看</view>
+      </view>
+    </view>
+
+    <view class="record-card">
+      <view class="card-left">
+        <view class="record-date">2025-4-5</view>
+        <view class="record-time">11:24</view>
+      </view>
+      <view class="card-middle">
+        <view class="progress-bar">
+          <view class="progress-fill" style="width: 66%"></view>
+        </view>
+        <view class="indicators">
+          <view class="indicator">
+            <text class="label">长度</text>
+            <text class="value">7.8mm</text>
+          </view>
+          <view class="indicator">
+            <text class="label">密度</text>
+            <text class="value">65%</text>
+          </view>
+          <view class="indicator">
+            <text class="label">眼型</text>
+            <text class="value">平眼</text>
+          </view>
+        </view>
+      </view>
+      <view class="card-right">
+        <view class="compare-down">↓5%</view>
+        <view class="action-btn">查看</view>
+      </view>
+    </view>
+
+    <view class="record-card">
+      <view class="card-left">
+        <view class="record-date">2025-3-17</view>
+        <view class="record-time">9:32</view>
+      </view>
+      <view class="card-middle">
+        <view class="progress-bar">
+          <view class="progress-fill" style="width: 75%"></view>
+        </view>
+        <view class="indicators">
+          <view class="indicator">
+            <text class="label">长度</text>
+            <text class="value">8.0mm</text>
+          </view>
+          <view class="indicator">
+            <text class="label">密度</text>
+            <text class="value">81%</text>
+          </view>
+          <view class="indicator">
+            <text class="label">眼型</text>
+            <text class="value">圆眼</text>
+          </view>
+        </view>
+      </view>
+      <view class="card-right">
+        <view class="compare-up">↑6%</view>
+        <view class="action-btn">查看</view>
+      </view>
+    </view>
+
+
+    <!-- 更多记录项... -->
+  </scroll-view>
+</view>

@@ -1,0 +1,47 @@
+<page-meta>
+  <navigation-bar title="我的" front-color="black" background-color="#F0F0F0"></navigation-bar>
+</page-meta>
+<view class="window_view_login">
+  <block wx:if="{{!login_status}}">
+    <button class="login_image" bindtap="user_login">
+      <image class="avatar" src="{{image}}" mode="aspectFill"></image>
+    </button>
+    <text class="avatar_text" style="font-size: 18px; color: black;">未登录，请点击头像</text>
+    <text class="avatar_text" style="font-size: 14px; color: gray;">登录后可获得更丰富的内容和服务</text>
+  </block>
+  <block wx:if="{{login_status}}">
+    <button class="login_image" bindtap="user_info">
+      <image class="avatar" src="{{user_image}}" mode="aspectFill"></image>
+    </button>
+    <text class="avatar_text_true" style="font-size: 20px; font-weight: bold;">智能美睫用户</text>
+  </block>
+</view>
+<view class="window_view_function">
+  <view class="function" bindtap="test_record_switch">
+    <image class="function_item_icon" src="{{images.skin}}" mode="aspectFill"></image>
+    <text class="function_item_title" style="font-size: 17px;">测试记录</text>
+    <image class="function_item_end" src="{{images.end}}" mode="aspectFill"></image>
+  </view>
+  <view class="function_item_interval"></view>
+
+  <view class="function" bindtap="app_use">
+    <image class="function_item_icon" src="{{images.tutorial}}" mode="aspectFill"></image>
+    <text class="function_item_title" style="font-size: 17px;">使用教程</text>
+    <image class="function_item_end" src="{{images.end}}" mode="aspectFill"></image>
+  </view>
+  <view class="function_item_interval"></view>
+
+  <view class="function" bindtap="app_settings">
+    <image class="function_item_icon" src="{{images.set}}" mode="aspectFill"></image>
+    <text class="function_item_title" style="font-size: 17px;">设置</text>
+    <image class="function_item_end" src="{{images.end}}" mode="aspectFill"></image>
+  </view>
+  <view class="function_item_interval"></view>
+
+  <view class="function" bindtap="app_concerning">
+    <image class="function_item_icon" src="{{images.about}}" mode="aspectFill"></image>
+    <text class="function_item_title" style="font-size: 17px;">关于</text>
+    <image class="function_item_end" src="{{images.end}}" mode="aspectFill"></image>
+  </view>
+  <view class="function_item_interval"></view>
+</view>

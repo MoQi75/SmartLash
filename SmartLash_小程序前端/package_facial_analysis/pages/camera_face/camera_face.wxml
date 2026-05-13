@@ -1,0 +1,43 @@
+<page-meta>
+  <navigation-bar title="" front-color="black" background-color="#F0F0F0"></navigation-bar>
+</page-meta>
+
+<view class="window_view">
+  <camera
+    wx:if="{{isAuth && cameraReady}}"
+    class="camera_view"
+    device-position="{{camera_position}}"
+    flash="off"
+    binderror="cameraError"
+    style="width: 100%; height: 100%;"
+  >
+    <cover-view class="camera_change" bindtap="switchCamera">
+      <cover-image class="camera_change_icon" src="{{images.face}}" mode="aspectFill"></cover-image>
+    </cover-view>
+    <cover-view wx:if="{{images.peopleFace}}" class="guide-outline">
+      <cover-image class="guide-outline-image" src="{{images.peopleFace}}" mode="scaleToFill"></cover-image>
+    </cover-view>
+  </camera>
+
+  <view wx:if="{{!isAuth}}" class="auth-panel">
+    <button class="auth-btn" bindtap="openCameraSettings">去开启相机权限</button>
+    <button class="auth-btn" bindtap="forceOpenCamera">继续尝试打开相机</button>
+  </view>
+
+  <view class="tip-text">{{tip_text}}</view>
+
+  <view wx:if="{{cameraReady}}" class="photo-grid">
+    <view class="photo-item">
+      <text>睁眼照</text>
+      <view class="image-container">
+        <image src="{{openEyeImage}}" mode="aspectFit"></image>
+      </view>
+    </view>
+    <view class="photo-item">
+      <text>闭眼照</text>
+      <view class="image-container">
+        <image src="{{closedEyeImage}}" mode="aspectFit"></image>
+      </view>
+    </view>
+  </view>
+</view>

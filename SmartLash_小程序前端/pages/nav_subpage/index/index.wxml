@@ -1,0 +1,110 @@
+<!--pages/nav_subpage/index/index.wxml-->
+<page-meta>
+  <navigation-bar title="首页" front-color="black" background-color="#F0F0F0"></navigation-bar>
+</page-meta>
+
+<view class="container">
+  <view class="search">
+    <view class="search_in">
+      <image src="{{icons.search}}"></image>
+      <input type="text" placeholder="请输入搜索内容" />
+      <view class="search_btn">搜索</view>
+    </view>
+  </view>
+</view>
+
+<view class="container-2">
+  <view class="grid">
+    <view class="grid-item" bindtap="navigateToDetection">
+      <image src="{{icons.lash}}"></image>
+      <text class="black-font">睫毛检测</text>
+    </view>
+    <view class="grid-item" bindtap="navigateToReport">
+      <image src="{{icons.report}}"></image>
+      <text class="black-font">检测报告</text>
+    </view>
+    <view class="grid-item" bindtap="navigateToRecords">
+      <image src="{{icons.test}}"></image>
+      <text class="black-font">测试记录</text>
+    </view>
+    <view class="grid-item" bindtap="navigateToHistory">
+      <image src="{{icons.history}}"></image>
+      <text class="black-font">浏览历史</text>
+    </view>
+    <view class="grid-item" bindtap="navigateToRecommendation">
+      <image src="{{icons.goods}}"></image>
+      <text class="black-font">好物推荐</text>
+    </view>
+    <view class="grid-item" bindtap="navigateToShopping">
+      <image src="{{icons.shopping}}"></image>
+      <text class="black-font">购物记录</text>
+    </view>
+    <view class="grid-item" bindtap="navigateToWishlist">
+      <image src="{{icons.wish}}"></image>
+      <text class="black-font">愿望清单</text>
+    </view>
+    <view class="grid-item" bindtap="navigateToFunctions">
+      <image src="{{icons.all}}"></image>
+      <text class="black-font">全部功能</text>
+    </view>
+  </view>
+</view>
+
+<view class="container-3">
+  <view class="header">美妆资讯</view>
+
+  <view class="card-row">
+    <view class="card">
+      <image class="card-image" src="{{newsImages.news01}}"></image>
+      <text class="card-text">韩束睡眠面膜限时特惠，低价优惠，速来抢购。</text>
+    </view>
+    <view class="card">
+      <image class="card-image" src="{{newsImages.news02}}"></image>
+      <text class="card-text">品牌感恩活动来袭，多重福利限时开启。</text>
+    </view>
+  </view>
+
+  <view class="card-row">
+    <view class="card">
+      <image class="card-image" src="{{newsImages.news03}}"></image>
+      <text class="card-text">冬季护肤专场上线，精华油优惠活动进行中。</text>
+    </view>
+    <view class="card">
+      <image class="card-image" src="{{newsImages.news04}}"></image>
+      <text class="card-text">专业化妆师为你解读专属风格。</text>
+    </view>
+  </view>
+
+  <view class="card-row">
+    <view class="card">
+      <image class="card-image" src="{{newsImages.news05}}"></image>
+      <text class="card-text">带上轻盈妆感，尽享夏日活力。</text>
+    </view>
+    <view class="card">
+      <image class="card-image" src="{{newsImages.news06}}"></image>
+      <text class="card-text">春日焕新专场，全场折扣活动持续中。</text>
+    </view>
+  </view>
+
+  <view class="card-row">
+    <view class="card">
+      <image class="card-image" src="{{newsImages.news07}}"></image>
+      <text class="card-text">足不出户，甄选全球美妆好物。</text>
+    </view>
+    <view class="card">
+      <image class="card-image" src="{{newsImages.news08}}"></image>
+      <text class="card-text">轻盈遮瑕，水感润透，打造自然妆效。</text>
+    </view>
+  </view>
+
+  <view class="card-row">
+    <view class="card">
+      <image class="card-image" src="{{newsImages.news09}}"></image>
+      <text class="card-text">学会挑选口红色号，让妆容更加精致协调。</text>
+    </view>
+    <view class="card">
+      <image class="card-image" src="{{newsImages.news10}}"></image>
+      <text class="card-text">多色可选，持久显色，满足日常妆容需求。</text>
+    </view>
+  </view>
+</view>

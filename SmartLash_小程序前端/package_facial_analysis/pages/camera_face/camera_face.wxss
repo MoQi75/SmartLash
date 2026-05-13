@@ -1,0 +1,123 @@
+/* pages/facial_analysis/camera_face/camera_face.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.window_view{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.camera_view{
+  display: flex;
+  position: relative;
+}
+.camera_change {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  z-index: 3;
+}
+
+.guide-outline {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.guide-outline-image {
+  width: 100%;
+  height: 90%;
+  opacity: 0.72;
+  transform: scaleX(1.38) translateY(6%);
+}
+
+.camera_capture {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center_image_cover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; 
+  height: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent; 
+}
+
+.center_image {
+  width: 100%;
+  height: 90%;
+}
+
+
+.tip-text {
+  margin-top: 10px;
+  color: #666;
+  font-size: 14px;
+}
+
+.photo-preview {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.photo-grid {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 30%;
+  margin-top: 10px;
+}
+
+.photo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.image-container {
+  border: 2px solid black; 
+  border-radius: 10px; 
+  width: 65px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+image {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px; 
+}

@@ -1,0 +1,61 @@
+<!--pages/statement/statement.wxml-->
+<page-meta>
+  <navigation-bar title="检测结果" front-color="black" background-color="#F0F0F0"></navigation-bar>
+</page-meta>
+
+<view class="container" style="height:{{layout_height}}px">
+  <view class="header-container">
+    <view class="header">
+      <view class="title">眼型分析报告</view>
+      <view class="decoration-line"></view>
+      <view class="subtitle">基于 AI 智能分析</view>
+    </view>
+    <view class="watermark">EYE ANALYSIS</view>
+  </view>
+
+  <view class="result-card">
+    <view class="result-header">
+      <image class="eye-image" src="{{resultImage}}"></image>
+      <view class="result-info">
+        <view class="result-title">您的眼型分析结果</view>
+        <view class="eye-type {{eyeClass}}">
+          <view class="type-name">{{eyeShape}}</view>
+          <view class="type-subtitle">专属眼型特征分析</view>
+        </view>
+      </view>
+    </view>
+    <view class="result-desc">{{eyeDescription}}</view>
+    <view class="result-tips">
+      <view class="tip-item">适合眼妆：自然系眼妆</view>
+      <view class="tip-item">推荐眼线：细长上扬型</view>
+      <view class="tip-item">睫毛建议：纤长卷翘款</view>
+    </view>
+  </view>
+
+  <view class="product-section">
+    <view class="section-title-sticky">
+      <view class="section-title-inner">为您推荐的产品</view>
+    </view>
+    <scroll-view scroll-x class="product-list" scroll-with-animation style="width: 100%;">
+      <block wx:for="{{products}}" wx:key="id">
+        <view class="product-item">
+          <image class="product-image" src="{{item.image}}" mode="aspectFill"></image>
+          <view class="product-name">{{item.name}}</view>
+          <view class="product-price">¥{{item.price}}</view>
+          <view class="match-rate">匹配度 {{item.matchRate}}%</view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <view class="footer">
+    <button class="primary-btn" bindtap="saveResult">
+      <image class="btn-icon" src="/images/tabBar/save.png" mode="aspectFit"></image>
+      保存结果
+    </button>
+    <button class="secondary-btn" bindtap="backToHome">
+      <image class="btn-icon" src="/images/tabBar/gohome.png" mode="aspectFit"></image>
+      返回首页
+    </button>
+  </view>
+</view>

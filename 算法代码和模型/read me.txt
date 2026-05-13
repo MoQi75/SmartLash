@@ -1,0 +1,2 @@
+需要预测的图片放在changshi文件夹中
+运行zlby_pred直接输出结果

@@ -1,0 +1,306 @@
+/* pages/nav_subpage/facial_analysis/facial_analysis.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.window_view{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 脸部识别的卡片集 */
+.analysis_swiper{
+  position: relative;
+  width: 100%;
+  height: 300rpx;
+  z-index: 1;
+  margin-top: 30rpx;  
+  margin-bottom: -20px;
+}
+.analysis_swiper_item{
+  width: 90%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.analysis_back{
+  width: 90%;
+  height: 95%;
+  display: flex;
+  align-items: center;
+  border-radius: 30rpx;
+  flex-direction: row;
+  background-color: rgb(159, 205, 236);
+  /* background-color: #F8F8F8; */
+  /* background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); */
+  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+.analysis_item{
+  width: 62%;
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+  padding: 28rpx 0 28rpx 52rpx;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.analysis_item_header{
+  display: flex;
+  align-items: center;
+}
+.analysis_item_icon{
+  width: 72rpx;
+  height: 72rpx;
+  flex-shrink: 0;
+}
+.analysis_item_title{
+  width: auto;
+  height: auto;
+  margin-left: 16rpx;
+  line-height: 1.2;
+  font-size: 40rpx;
+  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-weight: 600;
+  color: #333;
+}
+.analysis_item_describe{
+  width: 100%;
+  margin-top: 20rpx;
+  line-height: 1.5;
+  font-size: 28rpx;
+  color: rgba(51, 51, 51, 0.55);
+  text-align: left;
+}
+.analysis_item_button{
+  width: 220rpx !important;
+  height: 72rpx;
+  margin-top: 24rpx;
+  margin-left: 8rpx;
+  font-size: 30rpx;
+  display: flex;
+  background-color: #8a2be2;
+  color: white;
+  border-radius: 30rpx;
+  justify-content: center;
+  align-items: center;
+}
+.analysis_show{
+  width: 38%;
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+  padding: 20rpx 18rpx 20rpx 18rpx;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.analysis_show_back{
+  width: 210rpx;
+  height: 210rpx;
+  display: flex;
+  position: relative;
+}
+.analysis_show_text{
+  width: 56rpx;
+  height: 56rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -52%);
+  font-size: 20rpx;
+  line-height: 1.4;
+  color: rgba(80, 80, 80, 0.6);
+  text-align: center;
+  white-space: normal;
+  word-break: break-all;
+  z-index: 1;
+}
+swiper-item:nth-child(2) .analysis_item{
+  background-color:blueviolet;
+}
+
+.container {
+  width: 96%;
+  height: 200px;
+  padding: 40rpx 30rpx;
+  margin-top: 20rpx;
+  background-color: white;
+  /* background-color: rgb(82, 216, 149); */
+  border-radius: 30rpx 30rpx 0 0;
+  box-shadow: 0 10rpx 30rpx rgba(0, 0, 0, 0.1);
+}
+
+
+.header {
+  margin-bottom: 40rpx;
+  text-align: center;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #4a2c82;
+  position: relative;
+  display: inline-block;
+}
+
+.title::before,
+.title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 55px;
+  height: 1px;
+  background: linear-gradient(to right, #8a2be2, #d8b5ff);
+}
+
+.title::before {
+  left: -80px;
+}
+
+.title::after {
+  right: -80px;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20rpx;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  padding: 30rpx 20rpx;
+  background-color: white;
+  border-radius: 20rpx;
+  box-shadow: 0 8rpx 24rpx rgba(138, 43, 226, 0.08);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8rpx;
+  background: linear-gradient(to right, #8a2be2, #d8b5ff);
+}
+
+.step::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8rpx;
+  background: linear-gradient(to right, #8a2be2, #d8b5ff);
+}
+
+
+
+.step .icon {
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 20rpx;
+}
+
+.step text {
+  font-size: 28rpx;
+  color: #555;
+  font-weight: 500;
+  text-align: center;
+}
+
+.step:hover {
+  transform: translateY(-10rpx);
+  box-shadow: 0 12rpx 32rpx rgba(138, 43, 226, 0.15);
+}
+
+.barrage-container {
+  position: relative;
+  width: 500px;
+  height: 500rpx;
+  background: linear-gradient(135deg, #FFF5F7, #FFEEF2);
+  border-radius: 24rpx;
+  overflow: hidden;
+  box-shadow: 0 10rpx 30rpx rgba(255, 77, 126, 0.1);
+}
+
+.ad-wrapper {
+  width: 96%;
+  height: 660rpx;
+  margin: 8px auto;
+  position: relative;
+  border-radius: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 10rpx 30rpx rgba(138, 43, 226, 0.2);
+}
+
+.advertisement {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.image-hover {
+  transform: scale(1.03);
+}
+
+.ad-corner-tl, .ad-corner-tr, .ad-corner-bl, .ad-corner-br {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  border: 4rpx solid #8a2be2;
+  z-index: 2;
+}
+
+.ad-corner-tl {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 10rpx 0 0 0;
+}
+
+.ad-corner-tr {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 0 10rpx 0 0;
+}
+
+.ad-corner-bl {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+  border-radius: 0 0 0 10rpx;
+}
+
+.ad-corner-br {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+  border-radius: 0 0 10rpx 0;
+}
